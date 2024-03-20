@@ -1,13 +1,14 @@
 import { Box, Button, Card } from "@mui/material"
 // @ts-ignore
 import umraVideo from "./../assets/video/umrah_pattern_render.mp4";
+import PermitTabs from "../components/PermitTabs";
 
 export const PermtsScreen = () => {
 
   return <Box>
 
       <Box sx={{
-        pt: 3.5,
+        pt: 1.5,
         display: 'flex',
         justifyContent: 'flex-end'
         }}>
@@ -18,11 +19,15 @@ export const PermtsScreen = () => {
       </Button>
     </Box>
 
-        <Card sx={{background: '#594f41', mt: 4}}>
+    <PermitTabs />
+        <Box sx={{margin: 'auto', width: '100%', display: 'flex', justifyContent: 'center'}}>
+
+        <Card sx={{background: '#594f41', mt: 4, width: "90%" }}>
     <video width="100%" autoPlay muted loop>
           <source src={umraVideo} type="video/mp4" />
         </video>
         </Card>
+        </Box>
 
   </Box>
 }

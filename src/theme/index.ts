@@ -12,6 +12,7 @@ const theme = createTheme({
       primary: '#fff',
       secondary: '#61656b'
     },
+    divider: '#444444',
     secondary: {
       "100": '#28292b',
       "400": '#1b1d21',

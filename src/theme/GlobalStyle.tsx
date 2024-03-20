@@ -17,10 +17,12 @@ const GlobalStylesBase = () => {
           '*': {
             fontFamily: '"Noto Naskh Arabic", serif'
           },
-
+          html: {
+            background: 'linear-gradient(72deg, rgba(40,40,40,1) 26%, rgba(27,29,33,1) 100%)',
+          },
           body: {
-            // @ts-ignore
-            background: theme.palette.secondary[100]
+            height: '100%',
+            background: 'linear-gradient(72deg, rgba(40,40,40,1) 26%, rgba(27,29,33,1) 100%)',
           },
           hr: {
             marginTop: theme.spacing(3),
