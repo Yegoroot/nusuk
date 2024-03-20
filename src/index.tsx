@@ -1,15 +1,50 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
 import reportWebVitals from './reportWebVitals';
+import theme from './theme';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import ErrorPage from './screens/ErrorPage';
+import { PermtsScreen } from './screens/PermtsScreen';
+import { MainLayout } from './layouts/MainLayout';
+import HomeScreen from './screens/Main';
+import GlobalStylesBase from './theme/GlobalStyle';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <PermtsScreen />,
+      },
+      {
+        path: "/home",
+        element: <HomeScreen />,
+      },
+    ],
+  },
+]);
+
+
 root.render(
   <React.StrictMode>
-    <App />
+      <ThemeProvider theme={theme}>
+      {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+      <CssBaseline />
+      <GlobalStylesBase />
+      <RouterProvider router={router} />
+      </ThemeProvider>
   </React.StrictMode>
 );
 
