@@ -1,5 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
+import componentsOverride from './overrides'
 
 // A custom theme for this app
 const theme = createTheme({
@@ -7,7 +8,13 @@ const theme = createTheme({
     primary: {
       main: '#8b714e',
     },
+    text: {
+      primary: '#fff',
+      secondary: '#61656b'
+    },
     secondary: {
+      "100": '#28292b',
+      "400": '#1b1d21',
       main: '#19857b',
     },
     error: {
@@ -15,5 +22,7 @@ const theme = createTheme({
     },
   },
 });
+
+theme.components = componentsOverride(theme)
 
 export default theme;

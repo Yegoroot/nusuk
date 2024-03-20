@@ -8,12 +8,13 @@ export const NavMenu = () => {
   return <Box sx={{
     width: '100%', 
     p: 2,
+    pb: 0,
     display: 'flex', 
     direction: 'rtl',
     justifyContent: 'space-between'
   }}>
   <Box>
-    <Typography to="home" component={Link} sx={{
+    <Typography to="home" color={'textSecondary'} component={Link} sx={{
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -27,7 +28,7 @@ export const NavMenu = () => {
     </Typography>
   </Box>
   <Box>
-    <Typography to="/" component={Link} sx={{
+    <Typography color={'textPrimary'} to="/" component={Link} sx={{
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -41,7 +42,7 @@ export const NavMenu = () => {
     </Typography>
   </Box>
   <Box>
-    <Typography to="/" component={Link} sx={{
+    <Typography color={'textSecondary'} to="/" component={Link} sx={{
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',

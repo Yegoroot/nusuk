@@ -13,6 +13,15 @@ const GlobalStylesBase = () => {
 
         return ({
 
+
+          '*': {
+            fontFamily: '"Noto Naskh Arabic", serif'
+          },
+
+          body: {
+            // @ts-ignore
+            background: theme.palette.secondary[100]
+          },
           hr: {
             marginTop: theme.spacing(3),
             marginBottom: theme.spacing(3),
