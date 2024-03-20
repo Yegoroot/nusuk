@@ -13,6 +13,7 @@ import { PermtsScreen } from './screens/PermtsScreen';
 import { MainLayout } from './layouts/MainLayout';
 import HomeScreen from './screens/Main';
 import GlobalStylesBase from './theme/GlobalStyle';
+import { SettingsProvider } from './context/useSettings';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -39,12 +40,14 @@ const router = createBrowserRouter([
 
 root.render(
   <React.StrictMode>
+    <SettingsProvider>
       <ThemeProvider theme={theme}>
       {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
       <CssBaseline />
       <GlobalStylesBase />
       <RouterProvider router={router} />
       </ThemeProvider>
+    </SettingsProvider>
   </React.StrictMode>
 );
 

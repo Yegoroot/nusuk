@@ -15,6 +15,7 @@ const GlobalStylesBase = () => {
 
 
           '*': {
+            // color: theme.palette
             fontFamily: '"Noto Naskh Arabic", serif'
           },
           html: {
